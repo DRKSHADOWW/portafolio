@@ -1,0 +1,18 @@
+Crear el entorno virtual:
+python3 -m venv nombre_del_entorno
+
+Activar el entorno virtual:
+pipnombre_del_entorno\Scripts\activate.bat
+
+Instalar paquetes:
+pip install nombre_del_paquete
+
+depencias
+-pip install Uvicorn fastapi
+-pip freeze = se ven la dependencias instaladas
+- pip freeze > requirements.txt = Crea documento txt -m 
+
+uvicorn main:app --reload
+
+
+
