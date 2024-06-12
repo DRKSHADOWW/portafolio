@@ -85,6 +85,21 @@ section{
 .home-img img{
     width:35vw;
     border-radius: 100%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-2.4rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
 
 .home-content h3{
@@ -157,7 +172,7 @@ span{
 }
 
 .about-img{
-    width: 35vw;
+    width: 75vw;
 }
 
 .heading{
@@ -397,6 +412,14 @@ span{
         padding-bottom: 7rem;
     }
 
+    .portfolio{
+        padding-bottom: 7rem;
+    }
+
+    .contact{
+        min-width:auto ;
+    }
+
     .footer{
         padding: 2rem 3%;
     }
@@ -404,9 +427,6 @@ span{
 
 
 @media (max-width: 768px){
-    #menu-icon{
-        display: block;
-    }
 
     .navbar{
         position: absolute;
@@ -415,12 +435,17 @@ span{
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: 1.rem solid rgba(0,0,0,.2);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        border-top: .1rem solid rgba(0, 0 , 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0 ,0 , 0, .2);
         display: none;
     }
+    #menu-icon{
+        display: block;
+    }
 
-    .navbar .active{
+
+
+    .navbar.active{
         display: block;
     }
 
@@ -463,6 +488,50 @@ span{
 
 }
 
+.portfolio h2{
+    margin-bottom: 3rem;
+}
+
+.portfolio-container{
+    grid-template-columns: repeat(2, ifr);
+}
+
+@media (max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input{
+        width:100% ;
+    }
+
+}
+
+@media (max-width: 365px){
+    .home-img img{
+        width: 90vw;
+    }
+
+    .about-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+         
+    }
+}
 
 
 
