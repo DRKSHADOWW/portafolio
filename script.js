@@ -55,15 +55,15 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading',  { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, portfolio-container, contact-form',  { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact-form',  { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img',  { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content',  { origin: 'right' });
 
 
 /**typed js */
 
-let typed = new typed('#multiple-text',{
-    strings:['Frontend Developer', 'Youtuber', 'Blogger'],
+var typed = new Typed('.multiple-text',{
+    strings:["Frontend Developer", "Youtuber", "Blogger"],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
